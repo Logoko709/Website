@@ -5,13 +5,13 @@ body {
     background-color: #3d3c4a;
     color: #f0e4d7;
     line-height: 1.6;
-    animation: fadeIn 1s ease-in;
+    overflow-x: hidden;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -19,14 +19,18 @@ body {
     }
 }
 
+.fade-in {
+    animation: fadeIn 1s ease-in forwards;
+    opacity: 0;
+}
+
 header {
-    background-color: #3d3c4a; 
+    background-color: #3d3c4a;
     padding: 20px 0;
     position: sticky;
     top: 0;
-    z-index: 1000;  
+    z-index: 1000;
     margin-bottom: 5%;
-    animation: fadeIn 1s ease-in;
 }
 
 nav ul {
@@ -53,7 +57,6 @@ nav ul li a:hover {
 section {
     padding: 60px 20px;
     text-align: center;
-    animation: fadeIn 1s ease-in;
 }
 
 h1 span {
@@ -75,6 +78,7 @@ h1 .highlight {
 #home .text-content {
     text-align: left;
     max-width: 50%;
+    margin-right: 20%;
 }
 
 #home h1 {
@@ -88,14 +92,16 @@ h1 .highlight {
 
 #home .image-placeholder {
     width: 45%;
-    height: 400px;
-    background-color: #f0e4d7;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    font-size: 2em;
-    color: #3d3c4a;
+}
+
+#home .profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -121,23 +127,23 @@ h1 .highlight {
         font-size: 1em;
     }
 
-    #home .image-placeholder {
-        height: 300px;
-        font-size: 1.5em;
+    #home .profile-pic {
+        width: 200px;
+        height: 200px;
     }
 
     #contact form {
         max-width: 90%;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         gap: 15px;
-        margin: 0 auto; 
-        margin-right: 5%;
+        margin: 0 auto;
     }
 
     #contact form input,
     #contact form textarea {
-        width: 100%; 
+        width: 100%;
     }
 
     #contact form button {
@@ -150,8 +156,9 @@ h1 .highlight {
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.3s ease;
         font-size: 1em;
+        margin-left: 0;
         margin-top: 3%;
-        align-self: center; 
+        align-self: center;
     }
 
     nav ul li a {
@@ -162,6 +169,48 @@ h1 .highlight {
         transition: color 0.3s ease;
     }
 
+    #home .text-content {
+        text-align: left;
+        max-width: 50%;
+        margin-right: 20%;
+    }
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bio {
+    flex: 1;
+    min-width: 280px;
+    max-width: 45%;
+    color: #c0c0c0;
+    font-size: 1.4em;
+    line-height: 1.8;
+}
+
+.bio h3 {
+    color: #f4b642;
+    font-size: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.bio p {
+    margin: 10px 0;
 }
 
 .skills-container {
@@ -169,7 +218,8 @@ h1 .highlight {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    animation: fadeIn 1s ease-in;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .skill {
@@ -177,6 +227,19 @@ h1 .highlight {
     min-width: 200px;
     max-width: 300px;
     margin: 20px;
+    text-align: center;
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.skill span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .progress {
@@ -185,6 +248,7 @@ h1 .highlight {
     overflow: hidden;
     margin-top: 10px;
     height: 20px;
+    position: relative;
 }
 
 .progress-bar {
@@ -192,14 +256,20 @@ h1 .highlight {
     transition: width 0.5s ease;
 }
 
-.progress-bar.python { width: 90%; background-color: #4CAF50; }
-.progress-bar.java { width: 80%; background-color: #f4b642; }
-.progress-bar.javascript { width: 75%; background-color: #f7df1e; }
-.progress-bar.html { width: 85%; background-color: #e34c26; }
-.progress-bar.css { width: 80%; background-color: #264de4; }
-.progress-bar.react { width: 70%; background-color: #61dbfb; }
-.progress-bar.c { width: 60%; background-color: #555555; }
-.progress-bar.mysql { width: 70%; background-color: #4479a1; }
+.progress-bar.python { width: 90%; background-color: #A79191; }
+.progress-bar.java { width: 80%; background-color: #A79191; }
+.progress-bar.javascript { width: 75%; background-color: #A79191; }
+.progress-bar.html { width: 85%; background-color: #A79191; }
+.progress-bar.css { width: 80%; background-color: #A79191; }
+.progress-bar.react { width: 70%; background-color: #A79191; }
+.progress-bar.c { width: 60%; background-color: #A79191; }
+.progress-bar.mysql { width: 70%; background-color: #A79191; }
+
+.percentage {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #f0e4d7;
+}
 
 #skills h2 {
     color: #f4b642;
@@ -214,29 +284,11 @@ h1 .highlight {
     color: #c0c0c0;
 }
 
-.skills-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.skill {
-    width: 45%;
-    margin-bottom: 20px;
-}
-
-.skill span {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
 .skill-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
-    animation: fadeIn 1s ease-in;
 }
 
 .skill-icons img {
@@ -244,29 +296,11 @@ h1 .highlight {
     height: 50px;
 }
 
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: left;
-    animation: fadeIn 1s ease-in;
-}
-
-.about-content p {
-    flex: 1;
-    min-width: 280px;
-    max-width: 45%;
-}
-
 .more-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
-    animation: fadeIn 1s ease-in;
 }
 
 .more-item {
@@ -283,13 +317,12 @@ h1 .highlight {
 }
 
 form {
-    max-width: 60%;
+    max-width: 30%;
     margin: 0 auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    animation: fadeIn 1s ease-in;
 }
 
 form label {

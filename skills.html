@@ -7,63 +7,89 @@
     <link rel="stylesheet" href="Style/style.css">
 </head>
 <body>
-    <header>
+    <header class="fade-in">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="more.html">More</a></li>
             </ul>
         </nav>
     </header>
-    <section id="skills">
+    <section id="skills" class="fade-in" style="animation-delay: 0.4s;">
         <h2>My Skills:</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        <div class="skills-content">
+        <p>
+            As a dedicated and passionate developer, I have honed my skills in various programming languages and technologies. 
+            My expertise spans from back-end development with Python and Java, to front-end development using HTML, CSS, and JavaScript. 
+            I am proficient in building robust and scalable applications using React for front-end and have a solid understanding 
+            of database management with MySQL. My knowledge in C programming further strengthens my ability to handle system-level programming.
+        </p>
+        <div class="skills-container">
             <div class="skill">
+                <img src="Source/Python.jpeg" alt="Python" class="skill-icon">
                 <span>Python</span>
-                <div class="progress"><div class="progress-bar python"></div></div>
+                <div class="progress">
+                    <div class="progress-bar python" data-label="90%"></div>
+                </div>
+                <span class="percentage">90%</span>
             </div>
             <div class="skill">
+                <img src="Source/Java.png" alt="Java" class="skill-icon">
                 <span>Java</span>
-                <div class="progress"><div class="progress-bar java"></div></div>
+                <div class="progress">
+                    <div class="progress-bar java" data-label="80%"></div>
+                </div>
+                <span class="percentage">80%</span>
             </div>
             <div class="skill">
+                <img src="Source/JavaScript.png" alt="JavaScript" class="skill-icon">
                 <span>JavaScript</span>
-                <div class="progress"><div class="progress-bar javascript"></div></div>
+                <div class="progress">
+                    <div class="progress-bar javascript" data-label="75%"></div>
+                </div>
+                <span class="percentage">75%</span>
             </div>
             <div class="skill">
+                <img src="Source/HTML.png" alt="HTML" class="skill-icon">
                 <span>HTML</span>
-                <div class="progress"><div class="progress-bar html"></div></div>
+                <div class="progress">
+                    <div class="progress-bar html" data-label="85%"></div>
+                </div>
+                <span class="percentage">85%</span>
             </div>
             <div class="skill">
+                <img src="Source/Css.jpeg" alt="CSS" class="skill-icon">
                 <span>CSS</span>
-                <div class="progress"><div class="progress-bar css"></div></div>
+                <div class="progress">
+                    <div class="progress-bar css" data-label="80%"></div>
+                </div>
+                <span class="percentage">80%</span>
             </div>
             <div class="skill">
+                <img src="Source/React.png" alt="React" class="skill-icon">
                 <span>React</span>
-                <div class="progress"><div class="progress-bar react"></div></div>
+                <div class="progress">
+                    <div class="progress-bar react" data-label="70%"></div>
+                </div>
+                <span class="percentage">70%</span>
             </div>
             <div class="skill">
+                <img src="Source/C.jpeg" alt="C" class="skill-icon">
                 <span>C</span>
-                <div class="progress"><div class="progress-bar c"></div></div>
+                <div class="progress">
+                    <div class="progress-bar c" data-label="60%"></div>
+                </div>
+                <span class="percentage">60%</span>
             </div>
             <div class="skill">
+                <img src="Source/MySQL.png" alt="MySQL" class="skill-icon">
                 <span>MySQL</span>
-                <div class="progress"><div class="progress-bar mysql"></div></div>
+                <div class="progress">
+                    <div class="progress-bar mysql" data-label="70%"></div>
+                </div>
+                <span class="percentage">70%</span>
             </div>
-        </div>
-        <div class="skill-icons">
-            <img src="path/to/python-icon.png" alt="Python">
-            <img src="path/to/java-icon.png" alt="Java">
-            <img src="path/to/javascript-icon.png" alt="JavaScript">
-            <img src="path/to/html-icon.png" alt="HTML">
-            <img src="path/to/css-icon.png" alt="CSS">
-            <img src="path/to/react-icon.png" alt="React">
-            <img src="path/to/c-icon.png" alt="C">
-            <img src="path/to/mysql-icon.png" alt="MySQL">
         </div>
     </section>
 </body>
